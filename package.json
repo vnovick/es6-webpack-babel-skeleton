@@ -1,0 +1,47 @@
+{
+  "name": "es6-webpack-babel-skeleton",
+  "version": "1.0.0",
+  "description": "es6-webpack-babel-skeleton project",
+  "main": "frontend/scripts/app.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vnovick/es6-webpack-babel-skeleton.git"
+  },
+  "keywords": [
+    "es6",
+    "webpack",
+    "babel",
+    "skeleton",
+    "scss"
+  ],
+  "author": "Vladimir Novick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vnovick/es6-webpack-babel-skeleton/issues"
+  },
+  "homepage": "https://github.com/vnovick/es6-webpack-babel-skeleton",
+  "devDependencies": {
+    "jsdom": "^5.4.3",
+    "karma-opera-launcher": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "mocha-jsdom": "^0.5.0",
+    "phantomjs": "^1.9.17"
+  },
+  "dependencies": {
+    "chai": "^3.0.0",
+    "karma": "^0.12.37",
+    "karma-chai": "^0.1.0",
+    "karma-chai-plugins": "^0.6.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-cli": "^0.1.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-ie-launcher": "^0.2.0",
+    "karma-mocha": "^0.2.0",
+    "karma-safari-launcher": "^0.1.1",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4"
+  }
+}
