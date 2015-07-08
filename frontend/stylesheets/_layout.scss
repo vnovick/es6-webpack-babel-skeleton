@@ -1,0 +1,69 @@
+.card {
+  @include base-card-shadow;
+  &:hover {
+    background-color: $light-gray;
+  }
+  &__content {
+    padding: $base-gap;
+  }
+  margin: $base-gap;
+}
+
+.grid {
+  &__container {
+    max-width: $base-width;
+    padding: $base-gap;
+    margin: 0 auto;
+  }
+  &__row {
+    display: block;
+    margin: $base-gap;
+    clear: both;
+  }
+
+  &__column {
+    &--right {
+      float:right;
+    }
+    .grid--12 & {
+
+      &--1 {
+        @include calculateColumnWidth(1,12)
+      }
+      &--2 {
+        @include calculateColumnWidth(2,12)
+      }
+      &--3 {
+        @include calculateColumnWidth(3,12)
+      }
+      &--4 {
+        @include calculateColumnWidth(4,12)
+      }
+      &--5 {
+        @include calculateColumnWidth(5,12)
+      }
+      &--6 {
+        @include calculateColumnWidth(6,12)
+      }
+      &--7 {
+        @include calculateColumnWidth(7,12)
+      }
+      &--8 {
+        @include calculateColumnWidth(8,12)
+      }
+      &--9 {
+        @include calculateColumnWidth(9,12)
+      }
+      &--10 {
+        @include calculateColumnWidth(10,12)
+      }
+      &--11 {
+        @include calculateColumnWidth(11,12)
+      }
+      &--12 {
+        @include calculateColumnWidth(12,12)
+      }
+    }
+  }
+
+}

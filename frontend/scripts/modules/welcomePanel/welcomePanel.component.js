@@ -1,7 +1,23 @@
-var dom = require("utils/dom")
+import { node } from 'utils/dom'
+import React from 'react'
+import Card from 'components/card.component'
 
-module.exports = { 
-    initPanel: function(){
-      dom.write("Hello World test");
-    }
+class WelcomePanel extends Card {
+  constructor(props){
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="welcome-panel">
+         <Card content={this.props.content} />
+      </div>
+      )
+  }
+
+  initPanel(el,content){
+    React.render( <WelcomePanel content={content} />, el);   
+  }
 }
+
+module.exports = WelcomePanel;

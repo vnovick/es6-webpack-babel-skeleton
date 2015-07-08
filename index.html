@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello World Basic App</title>
+    <link rel="stylesheet" href="dist/styles.css"></link>
 </head>
 <body>
-<script src="http://localhost:8080/webpack-dev-server.js"></script>
-<script type="text/javascript" src="dist/bundle.js"></script>
+  <div class="grid grid--12">
+    <div class="grid__container">
+          <div class="grid__column grid__column--right grid__column--8">
+          </div>
+          <div class="grid__column grid__column--right grid__column--3">
+          </div>
+    </div>
+  </div>
+  <script src="http://localhost:8080/webpack-dev-server.js"></script>
+  <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>

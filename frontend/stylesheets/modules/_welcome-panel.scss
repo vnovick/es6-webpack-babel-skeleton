@@ -1,0 +1,18 @@
+.welcome-panel {
+  font-size: 32px;
+  .card {
+    &__content {
+      height: 200px;
+      text-align: center;
+      display: table;
+      width: 100%;
+      label {
+        &:hover {
+          cursor: pointer;
+        }
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
