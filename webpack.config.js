@@ -10,7 +10,7 @@ module.exports = {
         extensions: ["", ".js", ".scss"],
     },
     entry: {
-        app: ["./scripts/app.js"],
+        app: ["./scripts/app.js", "./stylesheets/app.scss"],
     },
     devtool: "source-map",
     output: {

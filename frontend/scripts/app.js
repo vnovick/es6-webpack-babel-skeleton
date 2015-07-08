@@ -1,4 +1,3 @@
-require("app.scss");
 require("core-js");
 import {nodes} from 'utils/dom';
 import WelcomePanel from "modules/welcomePanel/welcomePanel.component";
