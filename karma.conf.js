@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Mon Jun 29 2015 16:22:25 GMT+0300 (IDT)
-
+var path = require('path');
 module.exports = function(config) {
   config.set({
 
@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha-debug','mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
@@ -23,10 +23,19 @@ module.exports = function(config) {
     exclude: [
     ],
 
+    plugins: [
+        'karma-chrome-launcher',
+        'karma-chai',
+        'karma-mocha',
+        'karma-mocha-debug',
+        'karma-webpack',
+        'karma-sourcemap-loader'
+    ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'frontend/scripts/specs/app.spec.js': [ 'webpack', 'sourcemap' ]
     },
 
 
@@ -57,6 +66,31 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
+    webpack: {
+          context: path.join(__dirname, 'frontend'),
+          resolve: {
+            modulesDirectories: ["node_modules", "scripts", "scripts/specs"],
+            extensions: ["", ".js"],
+          },
+          entry: './scripts/specs/app.spec.js',
+          devtool: "#inline-source-map",
+          module: {
+            loaders: [
+              {
+                test: /\.js$/,
+                exclude: [
+                 /node_modules/,
+                 /translations\.js$/,
+                ],
+                loader: 'babel-loader',
+                query: {
+                 optional: 'runtime',
+                 nonStandard: 'false',
+                },
+              },
+            ],
+          }
+        },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
